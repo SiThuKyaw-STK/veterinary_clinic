@@ -135,3 +135,12 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+// website loader
+
+$(window).on('load',function(){
+    $('.loader').fadeOut(500,function(){
+        $(this).remove();
+    })
+    
+});
