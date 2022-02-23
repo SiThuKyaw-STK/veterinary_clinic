@@ -74,6 +74,24 @@ modalCloses.forEach((modalClose)=>{
     })
 })
 
+/*==================== GALLERY SWIPER ====================*/
+let swiper = new Swiper(".gallery__container", {
+    pagination: {
+      el: ".swiper-pagination",
+      dynamicBullets: true,
+      clickable: true,
+    },
+    breakpoints:{
+        576:{
+            slidesPerView:2,
+        },
+        768:{
+            slidesPerView:2,
+            spaceBetween:40,
+        }
+    }
+  });
+
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')
 
@@ -104,7 +122,12 @@ window.addEventListener('scroll', scrollHeader)
 
 
 /*==================== SHOW SCROLL UP ====================*/ 
-
+function scrollUp(){
+    const scrollUp = document.getElementById('scroll-up');
+    // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
+    if(this.scrollY >= 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+}
+window.addEventListener('scroll', scrollUp)
 
 /*==================== DARK LIGHT THEME ====================*/ 
 const themeButton = document.getElementById('theme-button')
@@ -144,3 +167,18 @@ $(window).on('load',function(){
     })
     
 });
+
+/*==================== SCROLL REVEAL ANIMATION ====================*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '30px',
+    duration: 2000,
+    reset: true
+});
+
+sr.reveal(`.home__data, .home__img,
+            .about__data, .about__img,
+             
+            .doctor__card, .testimonial__card`, {
+    interval: 200
+})

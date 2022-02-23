@@ -9,13 +9,18 @@
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
-
+    <!--==================== SWIPER CSS ====================-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
     <!--==================== CSS ====================-->
     <link rel="stylesheet" href="assets/css/styles.css" />
 
-    <title>Responsive Portfolio Website</title>
+    <title>Mickt(Veterinary Clinic)</title>
   </head>
   <body>
+    <!-- loader -->
     <div
       style="
         z-index: 100001;
@@ -202,8 +207,7 @@
             </p>
             <div class="about__buttons">
               <a
-                download=""
-                href="assets/pdf/Alexa-Cv.pdf"
+                href="#"
                 class="button button--flex"
               >
                 Explore History
@@ -476,14 +480,17 @@
       <section class="gallery section" id="gallery">
         <h2 class="section__title">Gallery</h2>
 
-        <div class="gallery__container grid">
-          <img class="gallery__img" src="assets/img/gallery_1.png" alt="" />
-          <img class="gallery__img" src="assets/img/gallery_2.png" alt="" />
-          <img class="gallery__img" src="assets/img/gallery_3.png" alt="" />
-          <img class="gallery__img" src="assets/img/gallery_4.png" alt="" />
-          <img class="gallery__img" src="assets/img/gallery_5.png" alt="" />
-          <img class="gallery__img" src="assets/img/gallery_6.png" alt="" />
-          <img class="gallery__img" src="assets/img/gallery_7.png" alt="" />
+        <div class="gallery__container container swiper">
+          <div class="swiper-wrapper">
+            <img class="gallery__img swiper-slide" src="assets/img/gallery_1.png" alt="" />
+            <img class="gallery__img swiper-slide" src="assets/img/gallery_2.png" alt="" />
+            <img class="gallery__img swiper-slide" src="assets/img/gallery_3.png" alt="" />
+            <img class="gallery__img swiper-slide" src="assets/img/gallery_4.png" alt="" />
+            <img class="gallery__img swiper-slide" src="assets/img/gallery_5.png" alt="" />
+            <img class="gallery__img swiper-slide" src="assets/img/gallery_6.png" alt="" />
+            <img class="gallery__img swiper-slide" src="assets/img/gallery_7.png" alt="" />
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
       </section>
 
@@ -493,7 +500,6 @@
         <span class="section__subtitle">Clients Saying</span>
 
         <div class="testimonial__container container">
-          <div class="">
             <div class="testimonial__card">
               <div class="testimonial__img-box">
                 <img
@@ -565,7 +571,7 @@
                 by step and with good results.
               </p>
             </div>
-          </div>
+          
         </div>
       </section>
 
@@ -694,9 +700,17 @@
     </footer>
 
     <!--==================== SCROLL TOP ====================-->
-
+    <a href="#home" id="scroll-up" class="scrollup">
+      <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
     <!--=============== JQUERY ===============-->
     <script src="assets/js/jquery.min.js"></script>
+
+    <!--========== SCROLL REVEAL ==========-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
     <!--=============== MIXITUP FILTER ===============-->
     <script src="assets/js/mixitup.min.js"></script>
